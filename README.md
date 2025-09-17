@@ -9,7 +9,7 @@ A tiny text-based adventure you run in the terminal. You’re an intrepid advent
 - Items to find: dagger, key, potion (and possibly a monster…)
 
 ## How to run
-Prerequisites: Python 3.x
+Prerequisites: Python 3.x — If you don’t have Python installed, download it here: https://www.python.org/downloads/
 
 On Windows PowerShell, from this folder:
 
@@ -18,6 +18,20 @@ python .\main.py
 # or
 py .\main.py
 ```
+
+On macOS/Linux (Terminal):
+
+```bash
+python3 ./main.py
+# or, if `python` already points to Python 3
+python ./main.py
+```
+
+On Windows Command Prompt (cmd.exe):
+
+```cmd
+python main.py
+``` 
 
 ## How to play
 Type commands at the prompt. Available commands:

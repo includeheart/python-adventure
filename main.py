@@ -77,7 +77,6 @@ rooms = {
   },
   'Basement' : {
     'up' : 'Kitchen',
-    'item' : 'potion',
     'description2' : 'You are in the basement. The air is musty and the only light comes from a small window near the ceiling. There is a staircase leading up. Tucked in the corner is a small chest with a lock.',
     'description' : 'You are in the basement. The air is musty and the only light comes from a small window near the ceiling. There is a staircase leading up.'
   }
@@ -167,16 +166,26 @@ while True:
 
   ## Define how a player can win
   if currentRoom == 'Garden' and 'potion' in inventory:
-    print('You escaped the house with the magic potion... YOU WIN!')
+    print('You\'ve escaped the house with the magic potion... YOU WIN!')
     break
 
   ## If a player enters a room with a monster
-  elif 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item'] and 'dagger' not in inventory:
-    print('A monster has got you... GAME OVER!')
+  if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item'] and 'dagger' not in inventory:
+    print('You have entered the room with a monster! It\'s drooling with hunger, and notices your clunky movements.')
+    print('A monster has eaten you... GAME OVER!')
     break
   
   ## If a player has the dagger and encounters a monster
   elif 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item'] and 'dagger' in inventory:
     del rooms[currentRoom]['item']
     rooms[currentRoom]['item'] = 'dead monster'
+    print('You have entered the room with a monster! It\'s drooling with hunger, and notices your clunky movements.')
     print('You have slain the monster with your dagger!')
+
+  if currentRoom == 'Basement' and 'key' in inventory and 'potion' not in inventory:
+    print('You use the key to unlock the chest, revealing the rare potion inside.')
+    inventory.append('potion')
+  elif currentRoom == 'Basement' and 'key' not in inventory and 'potion' not in inventory:
+    print('You see a locked chest here. You need a key to open it.')
+  elif currentRoom == 'Basement' and 'potion' in inventory:
+    print('The chest is open and empty now. You have already taken the potion.')
