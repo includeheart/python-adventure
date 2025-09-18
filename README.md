@@ -3,7 +3,9 @@
 A tiny text-based adventure you run in the terminal. You’re an intrepid adventurer hired to retrieve a rare potion from a mysterious house and escape through the garden — but a hungry monster lurks within.
 
 ## What’s here
-- Single-file game: `main.py`
+- Game entry point: `main.py`
+- Class definitions: `classes.py` (fighter, thief, wizard with HP, starting inventory, and descriptions)
+- Item descriptions: `items.py`
 - Starting room: Foyer
 - Rooms to explore: Foyer, Hall, Kitchen, Dining Room, Garden, Pantry, Bedroom, Bathroom, Basement
 - Items to find: dagger, key, potion (and possibly a monster…)
@@ -34,6 +36,12 @@ python main.py
 ``` 
 
 ## How to play
+When you start the game, you will be prompted to:
+- Enter your name
+- Choose a class: `fighter`, `thief`, or `wizard`
+
+Your starting HP and inventory are based on that choice (e.g., the thief starts with a `dagger`).
+
 Type commands at the prompt. Available commands:
 
 - `go [direction]` — Move between rooms (e.g., `go north`, `go east`, `go down`, `go up`).
@@ -53,7 +61,7 @@ Your current room and inventory are shown each turn. If a room contains an item,
 ## Notes
 - Movement: Typical directions are `north`, `south`, `east`, `west`, plus `up`/`down` for stairs.
 - The `look` command provides a different description when a room currently contains an item.
-- The `key` is collectible; it’s a hook for future features (e.g., unlocking a chest in the basement).
+- The `key` is collectible; it’s a hook for future features (e.g., unlocking a chest in the basement). In fact, if you have the key in the basement, you can unlock the chest to obtain the potion.
 
 ## Ideas to extend (later)
 - Locked containers/doors that use the key
