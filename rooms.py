@@ -1,3 +1,5 @@
+"""This module defines the rooms in the adventure game, including their connections, descriptions, and any items or monsters present."""
+
 from monsters import monsters
 
 rooms = {

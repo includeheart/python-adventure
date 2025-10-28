@@ -1,3 +1,5 @@
+"""This module defines the monsters that players may encounter in the game, along with their attributes such as hit points (hp), damage potential, and size."""
+
 from random import randint
 
 monsters = {

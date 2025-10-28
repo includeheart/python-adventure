@@ -1,7 +1,9 @@
+"""This module defines the items available in the game, along with their descriptions and effects."""
+
 items = {
   'key' : 'A small, rusty key. It may unlock something important.',
   'potion' : 'A vial of glowing green liquid. It looks very valuable. This must be the rare potion you were hired to find.',
-  'health potion' : 'A small vial filled with red liquid. Quickly drinking will resture 3 HP.',
+  'health potion' : 'A small vial filled with red liquid. Quickly drinking will restore 3 HP.',
   'metal armor' : 'Sturdy chain mail armor, subtracts 2 points of damage from enemies\' attacks.',
   'leather armor' : 'Light leather armor, subtracts 1 point of damage from enemies\' attacks. Imposes no penalties to stealth.',
   'robes' : 'A wizard\'s robe, offers no protection from attacks, but allows for free movement and spellcasting.',

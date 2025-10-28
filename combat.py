@@ -1,6 +1,9 @@
+"""This module handles the combat mechanics of the game, allowing players to fight monsters using their inventory items."""
+
 import random
 
 def combat(inventory):
+    """Handles combat encounters with monsters."""
     print("You have entered the room with a monster! It's drooling with hunger, and notices your clunky movements.")
     while True:
         action = input("Do you want to (f)ight or (r)un away? ")
